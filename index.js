@@ -18,10 +18,8 @@ var driver = new webdriver.Builder().
   build();
 
 driver.get('__testUrl__').then(function(){
-  driver.findElement(webdriver.By.name('q')).sendKeys('BrowserStack\n').then(function(){
-    driver.getTitle().then(function(title) {
-      console.log(title);
-      driver.quit();
-    });
+  driver.getTitle().then(function(title) {
+    console.log(title);
+    driver.quit();
   });
 });
